@@ -1,0 +1,7 @@
+name: web-crawl4ai
+version: 1.0.0
+description: "Crawl4AI web-content extraction — self-hosted headless-browser scraping service returning clean fit-markdown. Free, no API key; point CRAWL4AI_URL at your service (see docker/crawl4ai/README.md)."
+author: NousResearch
+kind: backend
+provides_web_providers:
+  - crawl4ai

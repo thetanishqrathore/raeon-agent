@@ -1,0 +1,219 @@
+{
+  "description": "Rubric-graded research eval cases (A4). Open-ended tasks mirroring actual Helix usage — AI/agents market tracking, aviation lead-qualification research, competitive briefs, 'latest X' freshness checks — where a single reference answer can't exist. An LLM judge scores each answer 0-1 on factual accuracy, citation accuracy, completeness, source quality, and tool efficiency (see research_rubric_eval.py). 'guidance' lists the aspects a complete answer covers (drives the completeness score); 'expected_source_types' steers the source-quality score; 'freshness_sensitive' tells the judge recency matters more than polish.",
+  "cases": [
+    {
+      "id": "agents-frameworks-2026",
+      "category": "market",
+      "tier": "detailed",
+      "question": "What are the leading open-source deep-research agent frameworks as of mid-2026, and how do they differ in architecture and citation grounding?",
+      "guidance": [
+        "names at least three concrete frameworks (e.g. GPT-Researcher, STORM, open_deep_research or successors)",
+        "contrasts single-loop vs multi-agent/supervisor architectures",
+        "explains how each grounds or verifies citations",
+        "notes maintenance/activity status of each project"
+      ],
+      "freshness_sensitive": true,
+      "expected_source_types": ["github repos", "project docs", "engineering blog posts"]
+    },
+    {
+      "id": "orchestration-consensus",
+      "category": "market",
+      "tier": "detailed",
+      "question": "Single-loop versus multi-agent supervisor architectures for LLM research agents: what do Anthropic's and LangChain's engineering write-ups from 2025-2026 actually recommend, and why did LangChain retire the supervisor design in open_deep_research?",
+      "guidance": [
+        "cites the specific Anthropic posts (building effective agents / multi-agent research system) accurately",
+        "states LangChain's stated reasons for retiring the supervisor",
+        "gives the conditions under which multi-agent still wins (breadth, parallel read-heavy tasks)",
+        "does not conflate multi-agent orchestration with simple tool delegation"
+      ],
+      "freshness_sensitive": false,
+      "expected_source_types": ["first-party engineering blogs", "github changelogs/PRs"]
+    },
+    {
+      "id": "agent-funding-latest-quarter",
+      "category": "market",
+      "tier": "detailed",
+      "question": "Which AI-agent startups announced significant funding rounds in the most recent quarter? For each: round size, lead investors, and what the company builds.",
+      "guidance": [
+        "covers several distinct startups from the CURRENT quarter, not stale 2024-2025 rounds",
+        "gives round size and lead investor per company",
+        "one-line product description per company",
+        "dates every round claim"
+      ],
+      "freshness_sensitive": true,
+      "expected_source_types": ["funding announcements", "reputable tech press", "company posts"]
+    },
+    {
+      "id": "mro-software-market-size",
+      "category": "market",
+      "tier": "detailed",
+      "question": "What is the estimated global market size for aviation MRO software in 2026, its projected growth rate, and who publishes those estimates? How much do the published figures disagree?",
+      "guidance": [
+        "gives at least two independent market-size estimates with publisher names",
+        "states CAGR or growth projection with the forecast window",
+        "flags the spread/disagreement between analyst firms instead of presenting one number as truth",
+        "distinguishes MRO software from the overall MRO services market"
+      ],
+      "freshness_sensitive": true,
+      "expected_source_types": ["analyst reports/abstracts", "industry press"]
+    },
+    {
+      "id": "rusada-envision-brief",
+      "category": "leads",
+      "tier": "detailed",
+      "question": "Lead-qualification brief on Rusada: what does its ENVISION suite do, which modules touch aircraft technical records, who are its typical customers, where is it headquartered, roughly how big is it, and what notable product or customer news shipped recently?",
+      "guidance": [
+        "describes ENVISION's scope and names the records-relevant modules",
+        "identifies customer segments (operators, MROs, CAMOs) with an example customer",
+        "HQ location and rough company size",
+        "at least one dated recent news item",
+        "an explicit fit/no-fit read for records-automation tooling"
+      ],
+      "freshness_sensitive": true,
+      "expected_source_types": ["vendor site", "aviation trade press", "customer announcements"]
+    },
+    {
+      "id": "lessor-records-decision-makers",
+      "category": "leads",
+      "tier": "detailed",
+      "question": "At mid-size aircraft lessors, which roles and titles typically own technical records and transition/redelivery documentation? Give sourced examples from job postings or organisation pages, and note which software tools those postings mention.",
+      "guidance": [
+        "names concrete titles (e.g. Technical Records Manager, Manager Technical Assets, VP Technical)",
+        "cites real postings or org pages as evidence, not generic reasoning",
+        "notes tooling mentioned in the evidence (AMOS, AirVault, spreadsheets, etc.)",
+        "distinguishes lessor-side roles from MRO/operator-side roles"
+      ],
+      "freshness_sensitive": false,
+      "expected_source_types": ["job postings", "company team pages", "linkedin org pages"]
+    },
+    {
+      "id": "camo-providers-europe",
+      "category": "leads",
+      "tier": "detailed",
+      "question": "Identify five independent CAMO providers in Europe that advertise technical-records or airworthiness-documentation services. For each: website, HQ country, service focus, and one evidence URL showing the records service.",
+      "guidance": [
+        "five distinct independent CAMOs (not airline-owned CAMO departments)",
+        "per-company: site, HQ country, records/documentation service focus",
+        "an evidence URL per company that actually shows the claimed service",
+        "no regulators, media sites, or software vendors in the list"
+      ],
+      "freshness_sensitive": false,
+      "expected_source_types": ["company sites", "service pages"]
+    },
+    {
+      "id": "teardown-traceability-segment",
+      "category": "leads",
+      "tier": "report",
+      "question": "Research the aircraft teardown / part-out segment: who are the notable companies, what documentation and back-to-birth traceability pain do they publicly describe, and which of them look like ICP fits for AI-assisted records tooling?",
+      "guidance": [
+        "names several teardown/part-out companies",
+        "quotes or paraphrases documented traceability/records pain with sources",
+        "explains back-to-birth traceability in one or two lines",
+        "ranks or shortlists ICP fits with reasoning"
+      ],
+      "freshness_sensitive": false,
+      "expected_source_types": ["company sites", "trade press", "conference/industry material"]
+    },
+    {
+      "id": "airvault-vs-flydocs",
+      "category": "competitive",
+      "tier": "report",
+      "question": "Competitive brief: GE Aerospace's AirVault versus flydocs for aviation records management — positioning, customer base, integrations, pricing signals, and recent strategic moves.",
+      "guidance": [
+        "accurate ownership (GE Aerospace for AirVault; flydocs' current owner)",
+        "positioning contrast (records repository vs transition/asset data services)",
+        "named customers or customer classes for each",
+        "integration story with MRO/M&E systems (AMOS, TRAX, etc.)",
+        "at least one dated recent move per company"
+      ],
+      "freshness_sensitive": true,
+      "expected_source_types": ["vendor sites", "trade press", "press releases"]
+    },
+    {
+      "id": "clay-waterfall-alternatives",
+      "category": "competitive",
+      "tier": "detailed",
+      "question": "Brief on Clay.com's waterfall enrichment: how the waterfall actually works, current pricing-tier signals, and the strongest open-source or self-hosted alternatives in 2026 for a solo founder running their own agent stack.",
+      "guidance": [
+        "explains waterfall enrichment (provider chain, pay-per-hit) correctly",
+        "current Clay pricing signals with a date",
+        "names 2-3 viable open/self-hosted alternatives with trade-offs",
+        "a recommendation fitted to a solo founder's cost profile"
+      ],
+      "freshness_sensitive": true,
+      "expected_source_types": ["vendor pricing pages", "github repos", "practitioner comparisons"]
+    },
+    {
+      "id": "firecrawl-vs-crawl4ai",
+      "category": "competitive",
+      "tier": "detailed",
+      "question": "Compare Firecrawl's hosted extraction API with self-hosted Crawl4AI (paired with SearXNG) for a personal research-agent stack in 2026: capabilities, JS rendering, anti-bot resilience, rate limits, and total cost.",
+      "guidance": [
+        "capability comparison including JS rendering and structured extraction",
+        "honest anti-bot/hostile-site trade-off (where hosted wins)",
+        "current Firecrawl pricing and limits with a date",
+        "self-hosting cost/effort for Crawl4AI",
+        "a scenario-based recommendation, not a single winner"
+      ],
+      "freshness_sensitive": true,
+      "expected_source_types": ["vendor docs/pricing", "github repos", "benchmarks"]
+    },
+    {
+      "id": "crawl4ai-latest-release",
+      "category": "freshness",
+      "tier": "quick",
+      "question": "What is the latest stable release of Crawl4AI, when did it ship, and what were the headline changes?",
+      "guidance": [
+        "exact latest version number",
+        "release date",
+        "2-4 headline changes from the release notes",
+        "cites the release page or changelog itself"
+      ],
+      "freshness_sensitive": true,
+      "expected_source_types": ["github releases/changelog", "project docs"]
+    },
+    {
+      "id": "bulk-sender-rules-2026",
+      "category": "freshness",
+      "tier": "detailed",
+      "question": "What are the current (2026) Google, Yahoo, and Microsoft bulk-sender requirements for cold outreach email — volume thresholds, authentication (SPF/DKIM/DMARC), one-click unsubscribe, complaint-rate limits — and what changed most recently?",
+      "guidance": [
+        "per-provider thresholds and the sender-volume trigger points",
+        "authentication requirements stated precisely (SPF+DKIM, DMARC policy)",
+        "RFC 8058 one-click unsubscribe requirement",
+        "complaint-rate ceiling (~0.3%) and enforcement reality",
+        "identifies the most recent rule change with a date"
+      ],
+      "freshness_sensitive": true,
+      "expected_source_types": ["provider sender guidelines (first-party)", "deliverability vendors"]
+    },
+    {
+      "id": "openrouter-cheap-extractors",
+      "category": "freshness",
+      "tier": "quick",
+      "question": "Which low-cost models currently on OpenRouter are best suited to high-volume web-page extraction and summarization, and what is their current price per million input/output tokens?",
+      "guidance": [
+        "names 3-5 currently-listed models fit for extraction workloads",
+        "current per-million-token pricing for each, dated",
+        "notes context-window sizes",
+        "flags that pricing/lineup churns and should be re-checked"
+      ],
+      "freshness_sensitive": true,
+      "expected_source_types": ["openrouter model pages", "provider pricing pages"]
+    },
+    {
+      "id": "deep-research-eval-practice",
+      "category": "market",
+      "tier": "detailed",
+      "question": "How are teams evaluating deep-research agents in 2025-2026 — which benchmarks (e.g. SimpleQA-style grading, DeepResearch Bench, BrowseComp) and which rubric dimensions recur — and what does that imply for a small self-hosted agent's eval harness?",
+      "guidance": [
+        "names 2-3 real benchmarks/eval approaches accurately",
+        "lists recurring rubric dimensions (factual accuracy, citation accuracy, completeness, source quality)",
+        "mentions LLM-as-judge caveats (bias, drift, calibration)",
+        "practical takeaway sized for a solo self-hosted harness"
+      ],
+      "freshness_sensitive": false,
+      "expected_source_types": ["papers/benchmark repos", "lab engineering posts"]
+    }
+  ]
+}

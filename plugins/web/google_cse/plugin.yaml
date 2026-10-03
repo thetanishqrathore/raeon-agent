@@ -1,0 +1,7 @@
+name: web-google-cse
+version: 1.0.0
+description: "Google Programmable Search (Custom Search JSON API) — free tier 100 queries/day, search only. Activates when GOOGLE_CSE_API_KEY + GOOGLE_CSE_CX are set."
+author: NousResearch
+kind: backend
+provides_web_providers:
+  - google-cse

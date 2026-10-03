@@ -1,0 +1,642 @@
+[
+  {
+    "id": "wikipedia-1",
+    "url": "https://en.wikipedia.org/wiki/Photosynthesis",
+    "status": 200,
+    "title": "Photosynthesis - Wikipedia",
+    "fetch_ms": 239,
+    "extract_ms": 341,
+    "page_text_chars": 98767,
+    "fit_chars": 96837,
+    "raw_md_chars": 266370,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0,
+      "compression": 0.9805
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.0,
+      "quality_f1": 0.0
+    },
+    "missed_include": [],
+    "leaked_exclude": []
+  },
+  {
+    "id": "wikipedia-2",
+    "url": "https://en.wikipedia.org/wiki/Mount_Everest",
+    "status": 200,
+    "title": "Mount Everest - Wikipedia",
+    "fetch_ms": 183,
+    "extract_ms": 712,
+    "page_text_chars": 176825,
+    "fit_chars": 332986,
+    "raw_md_chars": 494294,
+    "label_ok": 0.6,
+    "hermes": {
+      "content_recall": 0.6,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 0.75,
+      "compression": 1.8831
+    },
+    "baseline_raw": {
+      "content_recall": 0.6,
+      "boilerplate_removal": 0.0,
+      "quality_f1": 0.0
+    },
+    "missed_include": [
+      "highest mountain above sea level",
+      "located in the Mahalangur Himal"
+    ],
+    "leaked_exclude": []
+  },
+  {
+    "id": "news-1",
+    "url": "https://apnews.com/article/travelers-championship-golf-scheffler-hovland-37a1ab8383832d8a6d37638ecf7e3912",
+    "status": 200,
+    "title": "Scheffler makes clutch putt to force Monday playoff against ",
+    "fetch_ms": 121,
+    "extract_ms": 161,
+    "page_text_chars": 225182,
+    "fit_chars": 5351,
+    "raw_md_chars": 115482,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0,
+      "compression": 0.0238
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.2,
+      "quality_f1": 0.333
+    },
+    "missed_include": [],
+    "leaked_exclude": []
+  },
+  {
+    "id": "news-2",
+    "url": "https://www.bbc.com/news/articles/clyw3rkj2p7o",
+    "status": 200,
+    "title": "Venezuela earthquake: Mum rescued from rubble with newborn b",
+    "fetch_ms": 87,
+    "extract_ms": 36,
+    "page_text_chars": 6077,
+    "fit_chars": 4044,
+    "raw_md_chars": 11424,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0,
+      "compression": 0.6655
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.25,
+      "quality_f1": 0.4
+    },
+    "missed_include": [],
+    "leaked_exclude": []
+  },
+  {
+    "id": "docs_api-1",
+    "url": "https://docs.python.org/3/library/json.html",
+    "status": 200,
+    "title": "json — JSON encoder and decoder — Python 3.14.6 documentatio",
+    "fetch_ms": 54,
+    "extract_ms": 126,
+    "page_text_chars": 27311,
+    "fit_chars": 32292,
+    "raw_md_chars": 40057,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0,
+      "compression": 1.1824
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.4,
+      "quality_f1": 0.571
+    },
+    "missed_include": [],
+    "leaked_exclude": []
+  },
+  {
+    "id": "docs_api-2",
+    "url": "https://docs.python.org/3/library/pathlib.html",
+    "status": 200,
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.6 d",
+    "fetch_ms": 46,
+    "extract_ms": 262,
+    "page_text_chars": 60545,
+    "fit_chars": 77028,
+    "raw_md_chars": 94318,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0,
+      "compression": 1.2722
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.6,
+      "quality_f1": 0.75
+    },
+    "missed_include": [],
+    "leaked_exclude": []
+  },
+  {
+    "id": "github_readme-1",
+    "url": "https://github.com/sindresorhus/slugify",
+    "status": 200,
+    "title": "GitHub - sindresorhus/slugify: Slugify a string · GitHub",
+    "fetch_ms": 694,
+    "extract_ms": 54,
+    "page_text_chars": 11042,
+    "fit_chars": 5466,
+    "raw_md_chars": 15225,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0,
+      "compression": 0.495
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.75,
+      "quality_f1": 0.857
+    },
+    "missed_include": [],
+    "leaked_exclude": []
+  },
+  {
+    "id": "github_readme-2",
+    "url": "https://github.com/expressjs/express",
+    "status": 200,
+    "title": "GitHub - expressjs/express: Fast, unopinionated, minimalist ",
+    "fetch_ms": 598,
+    "extract_ms": 62,
+    "page_text_chars": 11252,
+    "fit_chars": 7351,
+    "raw_md_chars": 21230,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0,
+      "compression": 0.6533
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.5,
+      "quality_f1": 0.667
+    },
+    "missed_include": [],
+    "leaked_exclude": []
+  },
+  {
+    "id": "blog-1",
+    "url": "https://go.dev/blog/error-syntax",
+    "status": 200,
+    "title": "[ On | No ] syntactic support for error handling - The Go Pr",
+    "fetch_ms": 41,
+    "extract_ms": 27,
+    "page_text_chars": 30692,
+    "fit_chars": 17493,
+    "raw_md_chars": 23576,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 0.8,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 0.889,
+      "compression": 0.57
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.25,
+      "quality_f1": 0.4
+    },
+    "missed_include": [
+      "Robert Griesemer"
+    ],
+    "leaked_exclude": []
+  },
+  {
+    "id": "blog-2",
+    "url": "https://jvns.ca/blog/2023/10/06/new-talk--making-hard-things-easy/",
+    "status": 200,
+    "title": "New talk: Making Hard Things Easy",
+    "fetch_ms": 213,
+    "extract_ms": 112,
+    "page_text_chars": 35139,
+    "fit_chars": 34427,
+    "raw_md_chars": 52372,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 0.75,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 0.857,
+      "compression": 0.9797
+    },
+    "baseline_raw": {
+      "content_recall": 0.75,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 0.857
+    },
+    "missed_include": [
+      "A few weeks ago I gave a keynote at Strange Loop"
+    ],
+    "leaked_exclude": []
+  },
+  {
+    "id": "arxiv-1",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "status": 200,
+    "title": "[1706.03762] Attention Is All You Need",
+    "fetch_ms": 61,
+    "extract_ms": 23,
+    "page_text_chars": 8273,
+    "fit_chars": 3424,
+    "raw_md_chars": 9019,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 0.8,
+      "boilerplate_removal": 0.6,
+      "quality_f1": 0.686,
+      "compression": 0.4139
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.0,
+      "quality_f1": 0.0
+    },
+    "missed_include": [
+      "Ashish Vaswani"
+    ],
+    "leaked_exclude": [
+      "Submission history",
+      "export BibTeX citation"
+    ]
+  },
+  {
+    "id": "arxiv-2",
+    "url": "https://arxiv.org/abs/1412.6980",
+    "status": 200,
+    "title": "[1412.6980] Adam: A Method for Stochastic Optimization",
+    "fetch_ms": 60,
+    "extract_ms": 24,
+    "page_text_chars": 8286,
+    "fit_chars": 4037,
+    "raw_md_chars": 8384,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 0.6,
+      "boilerplate_removal": 0.8,
+      "quality_f1": 0.686,
+      "compression": 0.4872
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.2,
+      "quality_f1": 0.333
+    },
+    "missed_include": [
+      "Diederik P. Kingma",
+      "Jimmy Ba"
+    ],
+    "leaked_exclude": [
+      "Submission history"
+    ]
+  },
+  {
+    "id": "hackernews-1",
+    "url": "https://news.ycombinator.com/item?id=1",
+    "status": 200,
+    "title": "Y Combinator | Hacker News",
+    "fetch_ms": 227,
+    "extract_ms": 8,
+    "page_text_chars": 436,
+    "fit_chars": 575,
+    "raw_md_chars": 2067,
+    "label_ok": 0.8,
+    "hermes": {
+      "content_recall": 0.4,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 0.571,
+      "compression": 1.3188
+    },
+    "baseline_raw": {
+      "content_recall": 0.8,
+      "boilerplate_removal": 0.0,
+      "quality_f1": 0.0
+    },
+    "missed_include": [
+      "Y Combinator",
+      "57 points",
+      "&#34;the rising star of venture capital&#34; -unknown VC eating lunch on SHR"
+    ],
+    "leaked_exclude": []
+  },
+  {
+    "id": "hackernews-2",
+    "url": "https://news.ycombinator.com/item?id=8863",
+    "status": 200,
+    "title": "My YC app: Dropbox - Throw away your USB drive | Hacker News",
+    "fetch_ms": 265,
+    "extract_ms": 82,
+    "page_text_chars": 27141,
+    "fit_chars": 22879,
+    "raw_md_chars": 38121,
+    "label_ok": 0.667,
+    "hermes": {
+      "content_recall": 0.167,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 0.286,
+      "compression": 0.843
+    },
+    "baseline_raw": {
+      "content_recall": 0.833,
+      "boilerplate_removal": 0.0,
+      "quality_f1": 0.0
+    },
+    "missed_include": [
+      "My YC app: Dropbox - Throw away your USB drive",
+      "104 points",
+      "I have a few qualms with this app:",
+      "user?id=dhouston",
+      "71&nbsp;comments"
+    ],
+    "leaked_exclude": []
+  },
+  {
+    "id": "ecommerce_sandbox-1",
+    "url": "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+    "status": 200,
+    "title": "A Light in the Attic | Books to Scrape - Sandbox",
+    "fetch_ms": 159,
+    "extract_ms": 4,
+    "page_text_chars": 3567,
+    "fit_chars": 1453,
+    "raw_md_chars": 1895,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0,
+      "compression": 0.4073
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0
+    },
+    "missed_include": [],
+    "leaked_exclude": []
+  },
+  {
+    "id": "ecommerce_sandbox-2",
+    "url": "http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html",
+    "status": 200,
+    "title": "Tipping the Velvet | Books to Scrape - Sandbox",
+    "fetch_ms": 71,
+    "extract_ms": 6,
+    "page_text_chars": 4308,
+    "fit_chars": 1594,
+    "raw_md_chars": 2256,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0,
+      "compression": 0.37
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0
+    },
+    "missed_include": [],
+    "leaked_exclude": []
+  },
+  {
+    "id": "quotes_sandbox-1",
+    "url": "http://quotes.toscrape.com/",
+    "status": 200,
+    "title": "Quotes to Scrape",
+    "fetch_ms": 100,
+    "extract_ms": 7,
+    "page_text_chars": 4451,
+    "fit_chars": 1262,
+    "raw_md_chars": 4379,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 0.833,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 0.909,
+      "compression": 0.2835
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.0,
+      "quality_f1": 0.0
+    },
+    "missed_include": [
+      "deep-thoughts"
+    ],
+    "leaked_exclude": []
+  },
+  {
+    "id": "quotes_sandbox-2",
+    "url": "http://quotes.toscrape.com/page/2/",
+    "status": 200,
+    "title": "Quotes to Scrape",
+    "fetch_ms": 108,
+    "extract_ms": 9,
+    "page_text_chars": 6477,
+    "fit_chars": 2905,
+    "raw_md_chars": 6562,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 0.833,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 0.909,
+      "compression": 0.4485
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.0,
+      "quality_f1": 0.0
+    },
+    "missed_include": [
+      "heartbreak"
+    ],
+    "leaked_exclude": []
+  },
+  {
+    "id": "stackoverflow-1",
+    "url": "https://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster-than-processing-an-unsorted-array",
+    "status": 200,
+    "title": "java - Why is conditional processing of a sorted array faste",
+    "fetch_ms": 405,
+    "extract_ms": 351,
+    "page_text_chars": 135214,
+    "fit_chars": 75363,
+    "raw_md_chars": 151416,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 0.6,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 0.75,
+      "compression": 0.5574
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.0,
+      "quality_f1": 0.0
+    },
+    "missed_include": [
+      "In this C++ code, sorting the data",
+      "makes the primary loop ~6x faster"
+    ],
+    "leaked_exclude": []
+  },
+  {
+    "id": "stackoverflow-2",
+    "url": "https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python",
+    "status": 200,
+    "title": "iterator - What does the \"yield\" keyword do in Python? - Sta",
+    "fetch_ms": 269,
+    "extract_ms": 238,
+    "page_text_chars": 131883,
+    "fit_chars": 82886,
+    "raw_md_chars": 124987,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.75,
+      "quality_f1": 0.857,
+      "compression": 0.6285
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.0,
+      "quality_f1": 0.0
+    },
+    "missed_include": [],
+    "leaked_exclude": [
+      "Featured on Meta"
+    ]
+  },
+  {
+    "id": "mdn_reference-1",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns",
+    "status": 200,
+    "title": "grid-template-columns CSS property - CSS | MDN",
+    "fetch_ms": 81,
+    "extract_ms": 96,
+    "page_text_chars": 44556,
+    "fit_chars": 12957,
+    "raw_md_chars": 146334,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 0.8,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 0.889,
+      "compression": 0.2908
+    },
+    "baseline_raw": {
+      "content_recall": 0.8,
+      "boilerplate_removal": 0.0,
+      "quality_f1": 0.0
+    },
+    "missed_include": [
+      "defines the line names and track sizing functions of the grid columns"
+    ],
+    "leaked_exclude": []
+  },
+  {
+    "id": "mdn_reference-2",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+    "status": 200,
+    "title": "Array.prototype.slice() - JavaScript | MDN",
+    "fetch_ms": 49,
+    "extract_ms": 35,
+    "page_text_chars": 26022,
+    "fit_chars": 10679,
+    "raw_md_chars": 32844,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 0.8,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 0.889,
+      "compression": 0.4104
+    },
+    "baseline_raw": {
+      "content_recall": 0.8,
+      "boilerplate_removal": 0.0,
+      "quality_f1": 0.0
+    },
+    "missed_include": [
+      "method of Array instances returns a shallow copy"
+    ],
+    "leaked_exclude": []
+  },
+  {
+    "id": "wikipedia_tables-1",
+    "url": "https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)",
+    "status": 200,
+    "title": "List of countries and dependencies by population (United Nat",
+    "fetch_ms": 128,
+    "extract_ms": 180,
+    "page_text_chars": 25057,
+    "fit_chars": 81864,
+    "raw_md_chars": 123269,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0,
+      "compression": 3.2671
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.25,
+      "quality_f1": 0.4
+    },
+    "missed_include": [],
+    "leaked_exclude": []
+  },
+  {
+    "id": "wikipedia_tables-2",
+    "url": "https://en.wikipedia.org/wiki/List_of_tallest_buildings",
+    "status": 200,
+    "title": "List of tallest buildings - Wikipedia",
+    "fetch_ms": 147,
+    "extract_ms": 434,
+    "page_text_chars": 70582,
+    "fit_chars": 140856,
+    "raw_md_chars": 373064,
+    "label_ok": 1.0,
+    "hermes": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 1.0,
+      "quality_f1": 1.0,
+      "compression": 1.9956
+    },
+    "baseline_raw": {
+      "content_recall": 1.0,
+      "boilerplate_removal": 0.0,
+      "quality_f1": 0.0
+    },
+    "missed_include": [],
+    "leaked_exclude": []
+  }
+]
