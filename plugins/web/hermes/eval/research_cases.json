@@ -1,0 +1,47 @@
+{
+  "description": "Research-quality eval cases. Durable, verifiable answers so grading is stable across runs; each benefits from web research. key_points are facts a complete answer must contain (drives Key-Point-Recall); answer is the reference for the SimpleQA-style CORRECT/INCORRECT/NOT_ATTEMPTED judge.",
+  "cases": [
+    {
+      "id": "pragprog-authors",
+      "tier": "quick",
+      "question": "Who are the authors of the book 'The Pragmatic Programmer', and in what year was the first edition published?",
+      "answer": "Andrew Hunt and David Thomas; the first edition was published in 1999.",
+      "key_points": ["Andrew Hunt", "David Thomas", "1999"]
+    },
+    {
+      "id": "http-429",
+      "tier": "quick",
+      "question": "What does HTTP status code 429 mean, and what response header commonly accompanies it to tell the client when to retry?",
+      "answer": "429 means 'Too Many Requests' (the client is being rate-limited); the Retry-After header commonly indicates when to retry.",
+      "key_points": ["Too Many Requests", "Retry-After"]
+    },
+    {
+      "id": "rust-1.0",
+      "tier": "detailed",
+      "question": "Which organization originally sponsored the development of the Rust programming language, and in what year was Rust 1.0 released?",
+      "answer": "Mozilla originally sponsored Rust; Rust 1.0 was released in 2015.",
+      "key_points": ["Mozilla", "2015"]
+    },
+    {
+      "id": "ipv4-space",
+      "tier": "detailed",
+      "question": "Approximately how many unique addresses does IPv4 provide, and why is that the limit?",
+      "answer": "About 4.3 billion addresses, because IPv4 uses 32-bit addresses (2^32 ≈ 4.29 billion).",
+      "key_points": ["4.3 billion", "32-bit", "2^32"]
+    },
+    {
+      "id": "general-relativity",
+      "tier": "quick",
+      "question": "Who developed the general theory of relativity, and in what year was it published?",
+      "answer": "Albert Einstein developed general relativity; it was published in 1915.",
+      "key_points": ["Einstein", "1915"]
+    },
+    {
+      "id": "semver-spec",
+      "tier": "detailed",
+      "question": "In Semantic Versioning (SemVer), what do the three numbers in MAJOR.MINOR.PATCH each signify, and when must the MAJOR version be incremented?",
+      "answer": "MAJOR for incompatible API changes, MINOR for backward-compatible added functionality, PATCH for backward-compatible bug fixes; MAJOR must be incremented when you make incompatible (breaking) API changes.",
+      "key_points": ["incompatible", "backward-compatible", "bug fixes", "MAJOR"]
+    }
+  ]
+}

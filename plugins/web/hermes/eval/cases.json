@@ -1,0 +1,543 @@
+{
+  "description": "Verified eval set from hermes-scraper-evalset workflow",
+  "cases": [
+    {
+      "id": "wikipedia-1",
+      "url": "https://en.wikipedia.org/wiki/Photosynthesis",
+      "category": "wikipedia",
+      "must_include": [
+        "Photosynthetic organisms store the converted chemical energy within the",
+        "the process always begins when light energy is absorbed by the",
+        "Photosynthesis was discovered in 1779 by",
+        "power consumption of human civilization"
+      ],
+      "must_exclude": [
+        "From Wikipedia, the free encyclopedia",
+        "Jump to content",
+        "Retrieved from",
+        "This page was last edited"
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "wikipedia-2",
+      "url": "https://en.wikipedia.org/wiki/Mount_Everest",
+      "category": "wikipedia",
+      "must_include": [
+        "highest mountain above sea level",
+        "located in the Mahalangur Himal",
+        "Tibet Autonomous Region",
+        "Mount Everest attracts many climbers, including highly experienced mountain",
+        "first documented ascent of Everest in 1953"
+      ],
+      "must_exclude": [
+        "From Wikipedia, the free encyclopedia",
+        "Jump to content",
+        "Retrieved from",
+        "This page was last edited"
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "news-1",
+      "url": "https://apnews.com/article/travelers-championship-golf-scheffler-hovland-37a1ab8383832d8a6d37638ecf7e3912",
+      "category": "news",
+      "must_include": [
+        "Scheffler makes clutch putt to force Monday playoff",
+        "The final round was stopped for 90 minutes as storms moved over the TPC River Highlands",
+        "The playoff was to start at 9 a.m. Monday",
+        "That was one shot ahead of Collin Morikawa, who closed with a 61",
+        "Hovland poured in a 15-foot birdie putt from just off the green"
+      ],
+      "must_exclude": [
+        "Copyright 2026 The Associated Press",
+        "Related Stories",
+        "Privacy Policy",
+        "Terms of Use",
+        "Advertisement"
+      ],
+      "structured_enabled": true,
+      "structured_prompt": "Extract the main article metadata from this AP News article as JSON with the headline, the golf course venue mentioned, and the runner-up golfer who closed with a 61.",
+      "structured_schema_json": "{\"type\":\"object\",\"properties\":{\"headline\":{\"type\":\"string\"},\"venue\":{\"type\":\"string\"},\"runner_up\":{\"type\":\"string\"}},\"required\":[\"headline\",\"venue\",\"runner_up\"]}",
+      "structured_expected_json": "{\"headline\":\"Scheffler makes clutch putt to force Monday playoff against Hovland in Travelers Championship\",\"venue\":\"TPC River Highlands\",\"runner_up\":\"Collin Morikawa\"}"
+    },
+    {
+      "id": "news-2",
+      "url": "https://www.bbc.com/news/articles/clyw3rkj2p7o",
+      "category": "news",
+      "must_include": [
+        "A mother who was pulled from the rubble of her wrecked home in Venezuela",
+        "Dayana Patino said her son Juan David gave her",
+        "As long as he was alive, I was going to be alive",
+        "most brutal natural catastrophe",
+        "Dayana said she found hope when she felt a bible beneath her"
+      ],
+      "must_exclude": [
+        "BBC is not responsible for the content of external sites",
+        "More from the BBC",
+        "Watch Live",
+        "British Broadcasting Corporation"
+      ],
+      "structured_enabled": true,
+      "structured_prompt": "Extract the main article details from this BBC News article as JSON with the headline, the name of the rescued mother, and the country where the disaster occurred.",
+      "structured_schema_json": "{\"type\":\"object\",\"properties\":{\"headline\":{\"type\":\"string\"},\"mother_name\":{\"type\":\"string\"},\"country\":{\"type\":\"string\"}},\"required\":[\"headline\",\"mother_name\",\"country\"]}",
+      "structured_expected_json": "{\"headline\":\"Mum rescued from rubble with newborn baby tells BBC how he helped her survive\",\"mother_name\":\"Dayana Patino\",\"country\":\"Venezuela\"}"
+    },
+    {
+      "id": "docs_api-1",
+      "url": "https://docs.python.org/3/library/json.html",
+      "category": "docs_api",
+      "must_include": [
+        "is true, such items are simply skipped.",
+        "This module does not comply with the RFC",
+        "as a JSON formatted stream to",
+        "the default), the output is guaranteed",
+        "json.tool"
+      ],
+      "must_exclude": [
+        "<h3>Navigation</h3>",
+        "Quick search",
+        "Table of Contents",
+        "The Python Software Foundation is",
+        "Please donate."
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "docs_api-2",
+      "url": "https://docs.python.org/3/library/pathlib.html",
+      "category": "docs_api",
+      "must_include": [
+        "Pure path objects implement the",
+        "If you’ve never used this module before",
+        "operations without I/O",
+        "Listing subdirectories",
+        "Querying path properties"
+      ],
+      "must_exclude": [
+        "<h3>Navigation</h3>",
+        "Quick search",
+        "Table of Contents",
+        "The Python Software Foundation is",
+        "<h3>This page</h3>"
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "github_readme-1",
+      "url": "https://github.com/sindresorhus/slugify",
+      "category": "github_readme",
+      "must_include": [
+        "Slugify a string",
+        "Useful for URLs, filenames, and IDs.",
+        "npm install @sindresorhus/slugify",
+        "ya-lyublyu-edinorogov",
+        "Convert camelcase to separate words.",
+        "Make the slug lowercase."
+      ],
+      "must_exclude": [
+        "Skip to content",
+        "You signed in with another tab or window",
+        "Provide feedback",
+        "Notifications"
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "github_readme-2",
+      "url": "https://github.com/expressjs/express",
+      "category": "github_readme",
+      "must_include": [
+        "Fast, unopinionated, minimalist web framework",
+        "Robust routing",
+        "Focus on high performance",
+        "View system supporting 14+ template engines",
+        "Node.js 18 or higher is required.",
+        "HTTP helpers (redirection, caching, etc)"
+      ],
+      "must_exclude": [
+        "Skip to content",
+        "You signed in with another tab or window",
+        "Provide feedback",
+        "Search code, repositories, users"
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "blog-1",
+      "url": "https://go.dev/blog/error-syntax",
+      "category": "blog",
+      "must_include": [
+        "One of the oldest and most persistent complaints about Go concerns the verbosity of error handling.",
+        "The first explicit attempt by the Go team dates back to 2018",
+        "The Go team takes community feedback seriously",
+        "if err != nil",
+        "Robert Griesemer"
+      ],
+      "must_exclude": [
+        "Terms of Service",
+        "Privacy Policy",
+        "title=\"The Go Blog\"",
+        "Why Go"
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "blog-2",
+      "url": "https://jvns.ca/blog/2023/10/06/new-talk--making-hard-things-easy/",
+      "category": "blog",
+      "must_include": [
+        "A few weeks ago I gave a keynote at Strange Loop",
+        "One thing that took me a long time to learn was DNS",
+        "I got so mad about this that I decided to make it my job.",
+        "And it doesn't end. We're still having the same problems over and over and over"
+      ],
+      "must_exclude": [
+        "<h1><a href=\"/\">Julia Evans</a></h1>",
+        "<li><a href=\"/about\">About</a></li>",
+        "class=\"main-navigation\"",
+        "mc_embed_signup",
+        "<button type=\"submit\""
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "arxiv-1",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "category": "arxiv",
+      "must_include": [
+        "Attention Is All You Need",
+        "Ashish Vaswani",
+        "We propose a new simple network architecture, the Transformer",
+        "Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task",
+        "dispensing with recurrence and convolutions entirely"
+      ],
+      "must_exclude": [
+        "Which authors of this paper are endorsers?",
+        "Bibliographic and Citation Tools",
+        "Submission history",
+        "Connected Papers",
+        "export BibTeX citation"
+      ],
+      "structured_enabled": true,
+      "structured_prompt": "Extract the paper's title, the ordered list of author names, and the full abstract text from this arXiv abstract page.",
+      "structured_schema_json": "{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"authors\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"abstract\":{\"type\":\"string\"}},\"required\":[\"title\",\"authors\",\"abstract\"]}",
+      "structured_expected_json": "{\"title\":\"Attention Is All You Need\",\"authors\":[\"Ashish Vaswani\",\"Noam Shazeer\",\"Niki Parmar\",\"Jakob Uszkoreit\",\"Llion Jones\",\"Aidan N. Gomez\",\"Lukasz Kaiser\",\"Illia Polosukhin\"],\"abstract\":\"The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.\"}"
+    },
+    {
+      "id": "arxiv-2",
+      "url": "https://arxiv.org/abs/1412.6980",
+      "category": "arxiv",
+      "must_include": [
+        "Adam: A Method for Stochastic Optimization",
+        "Diederik P. Kingma",
+        "Jimmy Ba",
+        "We introduce Adam, an algorithm for first-order gradient-based optimization",
+        "Finally, we discuss AdaMax, a variant of Adam based on the infinity norm."
+      ],
+      "must_exclude": [
+        "Which authors of this paper are endorsers?",
+        "Bibliographic and Citation Tools",
+        "Submission history",
+        "export BibTeX citation",
+        "CORE Recommender"
+      ],
+      "structured_enabled": true,
+      "structured_prompt": "Extract the paper's title, the ordered list of author names, and the full abstract text from this arXiv abstract page.",
+      "structured_schema_json": "{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"authors\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"abstract\":{\"type\":\"string\"}},\"required\":[\"title\",\"authors\",\"abstract\"]}",
+      "structured_expected_json": "{\"title\":\"Adam: A Method for Stochastic Optimization\",\"authors\":[\"Diederik P. Kingma\",\"Jimmy Ba\"],\"abstract\":\"We introduce Adam, an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. The method is straightforward to implement, is computationally efficient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients. The hyper-parameters have intuitive interpretations and typically require little tuning. Some connections to related algorithms, on which Adam was inspired, are discussed. We also analyze the theoretical convergence properties of the algorithm and provide a regret bound on the convergence rate that is comparable to the best known results under the online convex optimization framework. Empirical results demonstrate that Adam works well in practice and compares favorably to other stochastic optimization methods. Finally, we discuss AdaMax, a variant of Adam based on the infinity norm.\"}"
+    },
+    {
+      "id": "hackernews-1",
+      "url": "https://news.ycombinator.com/item?id=1",
+      "category": "hackernews",
+      "must_include": [
+        "Y Combinator",
+        "57 points",
+        "&#34;the rising star of venture capital&#34; -unknown VC eating lunch on SHR",
+        "Is there anywhere to eat on Sandhill Road?",
+        "ycombinator.com"
+      ],
+      "must_exclude": [
+        "Hacker News",
+        "newsguidelines.html",
+        "newsfaq.html",
+        "login?goto=item%3Fid%3D1"
+      ],
+      "structured_enabled": true,
+      "structured_prompt": "Extract the HackerNews thread's title, its points (score), the number of comments, and the text of the top (first) comment. Return them as JSON matching the schema. Strip HTML entities so the comment text is plain readable text.",
+      "structured_schema_json": "{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"points\":{\"type\":\"integer\"},\"num_comments\":{\"type\":\"integer\"},\"top_comment_text\":{\"type\":\"string\"}},\"required\":[\"title\",\"points\",\"num_comments\",\"top_comment_text\"]}",
+      "structured_expected_json": "{\"title\":\"Y Combinator\",\"points\":57,\"num_comments\":3,\"top_comment_text\":\"\\\"the rising star of venture capital\\\" -unknown VC eating lunch on SHR\"}"
+    },
+    {
+      "id": "hackernews-2",
+      "url": "https://news.ycombinator.com/item?id=8863",
+      "category": "hackernews",
+      "must_include": [
+        "My YC app: Dropbox - Throw away your USB drive",
+        "104 points",
+        "I have a few qualms with this app:",
+        "getting an FTP account, mounting it locally with curlftpfs",
+        "user?id=dhouston",
+        "71&nbsp;comments"
+      ],
+      "must_exclude": [
+        "Hacker News",
+        "newsguidelines.html",
+        "newsfaq.html",
+        "login?goto=item%3Fid%3D8863"
+      ],
+      "structured_enabled": true,
+      "structured_prompt": "Extract the HackerNews thread's title, its points (score), the number of comments, and the text of the top (first) comment. Return them as JSON matching the schema. Strip HTML entities and convert paragraph breaks (<p>) so the comment text is plain readable text.",
+      "structured_schema_json": "{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"points\":{\"type\":\"integer\"},\"num_comments\":{\"type\":\"integer\"},\"top_comment_text\":{\"type\":\"string\"}},\"required\":[\"title\",\"points\",\"num_comments\",\"top_comment_text\"]}",
+      "structured_expected_json": "{\"title\":\"My YC app: Dropbox - Throw away your USB drive\",\"points\":104,\"num_comments\":71,\"top_comment_text\":\"I have a few qualms with this app:\\n\\n1. For a Linux user, you can already build such a system yourself quite trivially by getting an FTP account, mounting it locally with curlftpfs, and then using SVN or CVS on the mounted filesystem. From Windows or Mac, this FTP account could be accessed through built-in software.\\n\\n2. It doesn't actually replace a USB drive. Most people I know e-mail files to themselves or host them somewhere online to be able to perform presentations, but they still carry a USB drive in case there are connectivity problems. This does not solve the connectivity issue.\\n\\n3. It does not seem very \\\"viral\\\" or income-generating. I know this is premature at this point, but without charging users for the service, is it reasonable to expect to make money off of this?\"}"
+    },
+    {
+      "id": "ecommerce_sandbox-1",
+      "url": "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+      "category": "ecommerce_sandbox",
+      "must_include": [
+        "A Light in the Attic",
+        "£51.77",
+        "In stock (22 available)",
+        "It's hard to imagine a world without A Light in the Attic.",
+        "Product Description"
+      ],
+      "must_exclude": [
+        "<ul class=\"breadcrumb\">",
+        "<a href=\"../../index.html\">Home</a>",
+        "<footer class=\"footer container-fluid\">",
+        "Books</a>"
+      ],
+      "structured_enabled": true,
+      "structured_prompt": "Extract the product details from this books.toscrape.com product page. Return the book title, its price (including the currency symbol as shown), the availability text, and the star rating as an integer from 1 to 5.",
+      "structured_schema_json": "{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"availability\":{\"type\":\"string\"},\"rating\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":5}},\"required\":[\"title\",\"price\",\"availability\",\"rating\"]}",
+      "structured_expected_json": "{\"title\":\"A Light in the Attic\",\"price\":\"£51.77\",\"availability\":\"In stock (22 available)\",\"rating\":3}"
+    },
+    {
+      "id": "ecommerce_sandbox-2",
+      "url": "http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html",
+      "category": "ecommerce_sandbox",
+      "must_include": [
+        "Tipping the Velvet",
+        "£53.74",
+        "In stock (20 available)",
+        "\"Erotic and absorbing...Written with starling power.",
+        "Product Description"
+      ],
+      "must_exclude": [
+        "<ul class=\"breadcrumb\">",
+        "<a href=\"../../index.html\">Home</a>",
+        "<footer class=\"footer container-fluid\">",
+        "Books</a>"
+      ],
+      "structured_enabled": true,
+      "structured_prompt": "Extract the product details from this books.toscrape.com product page. Return the book title, its price (including the currency symbol as shown), the availability text, and the star rating as an integer from 1 to 5.",
+      "structured_schema_json": "{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"availability\":{\"type\":\"string\"},\"rating\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":5}},\"required\":[\"title\",\"price\",\"availability\",\"rating\"]}",
+      "structured_expected_json": "{\"title\":\"Tipping the Velvet\",\"price\":\"£53.74\",\"availability\":\"In stock (20 available)\",\"rating\":1}"
+    },
+    {
+      "id": "quotes_sandbox-1",
+      "url": "http://quotes.toscrape.com/",
+      "category": "quotes_sandbox",
+      "must_include": [
+        "The world as we have created it is a process of our thinking.",
+        "Albert Einstein",
+        "It is our choices, Harry, that show what we truly are",
+        "deep-thoughts",
+        "J.K. Rowling",
+        "There are only two ways to live your life."
+      ],
+      "must_exclude": [
+        "Top Ten tags",
+        "Login",
+        "GoodReads",
+        "Made with",
+        "Quotes to Scrape"
+      ],
+      "structured_enabled": true,
+      "structured_prompt": "Extract the first 3 quotes from the page. For each, return the quote_text (the full quote including surrounding quotation marks), the author name, and the list of tags. Return them in the order they appear on the page.",
+      "structured_schema_json": "{\"type\":\"object\",\"properties\":{\"quotes\":{\"type\":\"array\",\"minItems\":3,\"maxItems\":3,\"items\":{\"type\":\"object\",\"properties\":{\"quote_text\":{\"type\":\"string\"},\"author\":{\"type\":\"string\"},\"tags\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[\"quote_text\",\"author\",\"tags\"]}}},\"required\":[\"quotes\"]}",
+      "structured_expected_json": "{\"quotes\":[{\"quote_text\":\"“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”\",\"author\":\"Albert Einstein\",\"tags\":[\"change\",\"deep-thoughts\",\"thinking\",\"world\"]},{\"quote_text\":\"“It is our choices, Harry, that show what we truly are, far more than our abilities.”\",\"author\":\"J.K. Rowling\",\"tags\":[\"abilities\",\"choices\"]},{\"quote_text\":\"“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”\",\"author\":\"Albert Einstein\",\"tags\":[\"inspirational\",\"life\",\"live\",\"miracle\",\"miracles\"]}]}"
+    },
+    {
+      "id": "quotes_sandbox-2",
+      "url": "http://quotes.toscrape.com/page/2/",
+      "category": "quotes_sandbox",
+      "must_include": [
+        "This life is what you make it.",
+        "Marilyn Monroe",
+        "It takes a great deal of bravery to stand up to our enemies",
+        "heartbreak",
+        "If you can",
+        "Albert Einstein"
+      ],
+      "must_exclude": [
+        "Top Ten tags",
+        "Login",
+        "GoodReads",
+        "Made with",
+        "Quotes to Scrape"
+      ],
+      "structured_enabled": true,
+      "structured_prompt": "Extract the first 3 quotes from the page. For each, return the quote_text (the full quote including surrounding quotation marks), the author name, and the list of tags. Return them in the order they appear on the page.",
+      "structured_schema_json": "{\"type\":\"object\",\"properties\":{\"quotes\":{\"type\":\"array\",\"minItems\":3,\"maxItems\":3,\"items\":{\"type\":\"object\",\"properties\":{\"quote_text\":{\"type\":\"string\"},\"author\":{\"type\":\"string\"},\"tags\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[\"quote_text\",\"author\",\"tags\"]}}},\"required\":[\"quotes\"]}",
+      "structured_expected_json": "{\"quotes\":[{\"quote_text\":\"“This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get to decide how you're going to mess it up. Girls will be your friends - they'll act like it anyway. But just remember, some come, some go. The ones that stay with you through everything - they're your true best friends. Don't let go of them. Also remember, sisters make the best friends in the world. As for lovers, well, they'll come and go too. And baby, I hate to say it, most of them - actually pretty much all of them are going to break your heart, but you can't give up because if you give up, you'll never find your soulmate. You'll never find that half who makes you whole and that goes for everything. Just because you fail once, doesn't mean you're gonna fail at everything. Keep trying, hold on, and always, always, always believe in yourself, because if you don't, then who will, sweetie? So keep your head high, keep your chin up, and most importantly, keep smiling, because life's a beautiful thing and there's so much to smile about.”\",\"author\":\"Marilyn Monroe\",\"tags\":[\"friends\",\"heartbreak\",\"inspirational\",\"life\",\"love\",\"sisters\"]},{\"quote_text\":\"“It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.”\",\"author\":\"J.K. Rowling\",\"tags\":[\"courage\",\"friends\"]},{\"quote_text\":\"“If you can't explain it to a six year old, you don't understand it yourself.”\",\"author\":\"Albert Einstein\",\"tags\":[\"simplicity\",\"understand\"]}]}"
+    },
+    {
+      "id": "stackoverflow-1",
+      "url": "https://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster-than-processing-an-unsorted-array",
+      "category": "stackoverflow",
+      "must_include": [
+        "In this C++ code, sorting the data",
+        "makes the primary loop ~6x faster",
+        "What is Branch Prediction?",
+        "Trains are heavy and have a lot of inertia",
+        "You guess which direction the train will go"
+      ],
+      "must_exclude": [
+        "Hot Network Questions",
+        "Stack Overflow for Teams",
+        "user contributions licensed under",
+        "Featured on Meta"
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "stackoverflow-2",
+      "url": "https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python",
+      "category": "stackoverflow",
+      "must_include": [
+        "def _get_child_candidates(self, distance, min_dist, max_dist):",
+        "And this is the caller:",
+        "Reading its items one by one is called iteration:",
+        "mylist = [1, 2, 3]",
+        "Yay - no more "
+      ],
+      "must_exclude": [
+        "Hot Network Questions",
+        "Stack Overflow for Teams",
+        "user contributions licensed under",
+        "Featured on Meta"
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "mdn_reference-1",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns",
+      "category": "mdn_reference",
+      "must_include": [
+        "defines the line names and track sizing functions of the grid columns",
+        "Formal syntax",
+        "Initial value",
+        "grid-template-columns",
+        "CSS property"
+      ],
+      "must_exclude": [
+        "Skip to main content",
+        "In this article",
+        "See also",
+        "Your blueprint for a better internet"
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "mdn_reference-2",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+      "category": "mdn_reference",
+      "must_include": [
+        "method of Array instances returns a shallow copy",
+        "Zero-based index at which to start extraction",
+        "A new array containing the extracted elements.",
+        "Return value",
+        "end of the array"
+      ],
+      "must_exclude": [
+        "Skip to main content",
+        "In this article",
+        "See also"
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "wikipedia_tables-1",
+      "url": "https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)",
+      "category": "wikipedia_tables",
+      "must_include": [
+        "1,425,423,212",
+        "1,422,584,933",
+        "World population",
+        "Population Prospects",
+        "United Nations"
+      ],
+      "must_exclude": [
+        "Jump to content",
+        "From Wikipedia, the free encyclopedia",
+        "Privacy policy",
+        "mw-jump-link"
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    },
+    {
+      "id": "wikipedia_tables-2",
+      "url": "https://en.wikipedia.org/wiki/List_of_tallest_buildings",
+      "category": "wikipedia_tables",
+      "must_include": [
+        "Burj Khalifa",
+        "Merdeka 118",
+        "Shanghai Tower",
+        "Kuala Lumpur",
+        "tallest building since 20"
+      ],
+      "must_exclude": [
+        "Jump to content",
+        "From Wikipedia, the free encyclopedia",
+        "Privacy policy",
+        "Download as PDF"
+      ],
+      "structured_enabled": false,
+      "structured_prompt": "",
+      "structured_schema_json": "",
+      "structured_expected_json": ""
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# Crawl4AI self-hosted extraction service for Hermes.
+# See README.md in this directory for the full story.
+#
+# Usage:
+#   CRAWL4AI_API_TOKEN=$(grep '^CRAWL4AI_API_TOKEN=' ~/.hermes/.env | cut -d= -f2) \
+#     docker compose up -d
+services:
+  crawl4ai:
+    image: unclecode/crawl4ai:0.9.0
+    container_name: hermes-crawl4ai
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:11235:11235"   # loopback only — never expose publicly
+    shm_size: 1g
+    environment:
+      # REQUIRED on 0.9.0+: without it the app binds loopback *inside* the
+      # container and the port mapping is dead. Never hardcode it here.
+      CRAWL4AI_API_TOKEN: ${CRAWL4AI_API_TOKEN:?set CRAWL4AI_API_TOKEN (see README.md)}
+    deploy:
+      resources:
+        limits:
+          memory: 4g
+    mem_limit: 4g
+    memswap_limit: 4g

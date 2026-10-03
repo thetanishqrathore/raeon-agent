@@ -1,0 +1,25 @@
+# Minimal SearXNG settings for Hermes' resilient router.
+# Inherits SearXNG's defaults; overrides only what the router needs.
+use_default_settings: true
+
+server:
+  # REQUIRED: replace with a random secret, e.g.
+  #   python -c "import secrets; print(secrets.token_hex(32))"
+  secret_key: "CHANGE_ME_run_python_secrets_token_hex_32"
+  # The agent is the only client — turn off the bot/rate limiter so Hermes'
+  # automated queries aren't throttled/blocked by SearXNG itself.
+  limiter: false
+  image_proxy: false
+
+search:
+  # The Hermes searxng provider calls /search?format=json — JSON MUST be enabled
+  # (it is OFF in stock SearXNG, which is the usual "public instance" failure).
+  formats:
+    - html
+    - json
+
+# Optional: trim to the engines you want the router to aggregate. Defaults
+# include google, bing, duckduckgo, brave, etc. Leaving defaults is fine.
+# engines:
+#   - name: google
+#     disabled: false
